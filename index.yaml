@@ -1,0 +1,30 @@
+openapi: 3.0.3
+info:
+  title: 'OpenAPI Course'
+  version: '1.0'
+  description: 'My Test API'
+  contact:
+    name: Shruti Kuber
+    url: www.kuberaspeaking.com
+  license:
+    name: Apache 2.0
+servers:
+  - url: https://cdn.emnify.net
+    description: EMnify API
+    
+paths:
+  /api/v1/authenticate:
+    post:
+      tags:
+        - Authenticate
+      description: Authentication 
+      This entry point returns a JWT auth_token for authenticating further requests to the API. You can use either a username- password or an App token to authenticate
+      responses:
+        '200':
+          description: OK
+        '404':
+          description: InvalidReference
+  
+
+
+
